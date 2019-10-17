@@ -147,7 +147,8 @@ summary{cursor: pointer}
     <h1 class="w3-xxxlarge" style="color: #9E283E;"><b>Contact & Feedback.</b></h1>
     <hr style="width:50px;border:5px solid #9E283E;" class="w3-round">
     <p>Do you want to participate in improving the pain-model? Fill out the form and fill us in with the details :) We love receiving new nudges and refreshing viewpoints or critics!</p>
-    <form action="https://formspree.io/xggbqpox" method="POST" target="blank">
+    <form action="https://getsimpleform.com/messages?form_api_token=32abc2212d2184f6766e4f237e444637" method="post"target="blank">
+      <input type='hidden' name='redirect_to' value="thankyou.html">
       <div class="w3-section">
         <label>Name</label>
         <input class="w3-input w3-border" type="text" name="Name">
@@ -158,7 +159,7 @@ summary{cursor: pointer}
       </div>
       <div class="w3-section">
         <label>Message</label>
-        <input class="w3-input w3-border" type="text" name="Message" required>
+        <textarea class="w3-input w3-border" rows="5" style="width: 100%;text-align: left;" type="text" name="Message" required></textarea>
       </div>
       <button type="submit" class="w3-button w3-block w3-padding-large w3-margin-bottom" style="background-color: #9E283E;color: white;">Send Message</button>
     </form>  
