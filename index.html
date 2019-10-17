@@ -9,6 +9,7 @@
 <style>
 body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
 body {font-size:16px;}
+summary{cursor: pointer}
 .w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
 .w3-half img:hover{opacity:1}
 </style>
@@ -54,8 +55,10 @@ body {font-size:16px;}
    <!-- Introduction -->
   <div class="w3-container" id="services" style="margin-top:5px">   
     <p>We are a design engineering team under the direction of Professor Bernard Yannou. We aim to run an experiment on how we can extract a complete and concise inventory of a user's problems, illustrated in a storyboard. We try through this experiment to give insights about solutions for a better state of living for users by depicting their daily tangible and potential problems.</p>
-    <p>Nonetheless, the expression of "extracting user's problems" seems as much promising as ambiguous, doesn't it? so, what do we mean exactly by extracting or depicting painful situations?  
-    </p><br><p>It means capturing information and explicit it. How? you just need to read the storyboard. Focus on each scene which represents a single painful situation. By clicking on the link below each scene you will be forwarded to a form that displays the pain-model to follow. Each form presents multiple questions with prior definitions or/and instructions. Reading the definitions is obligatory to avoid errors during your mission of extracting the components of the illustrated painful-situations. By the way, you have just above a tutorial video that explains through a concrete example the process of running this test ;) Feel free to regain that panel whenever you feel the urge of getting more clarifications!</p><br> Good LUCK!!
+    <details>
+      <summary style="color:#78698C; font-size: 20px;">CONTINUE READING</summary>
+        <p>Nonetheless, the expression of "extracting user's problems" seems as much promising as ambiguous, doesn't it? so, what do we mean exactly by extracting or depicting painful situations?  
+    </p><p>It means capturing information and explicit it. How? you just need to read the storyboard. Focus on each scene which represents a single painful situation. By clicking on the link below each scene you will be forwarded to a form that displays the pain-model to follow. Each form presents multiple questions with prior definitions or/and instructions. Reading the definitions is obligatory to avoid errors during your mission of extracting the components of the illustrated painful-situations. By the way, you have just above a tutorial video that explains through a concrete example the process of running this test ;) Feel free to regain that panel whenever you feel the urge of getting more clarifications!</p> </details>... GOOD LUCK!! 
   </div>
   <!-- Photo grid (modal) -->
   <div class="w3-row-padding">
@@ -79,8 +82,8 @@ body {font-size:16px;}
       <br>
       <a href="test1scene4.html" style="font-weight: bold; font-style: 30px; color: #9E283E;"> <h2>Encoding Scene 4 </h2></a> click on the link above to take the test4      
       <img src="images/storyboard16.jpg" style="width:100%" onclick="onClick(this)" alt="image of Graphic signs used in the storyboard">
-      <br>
-      These are the
+      <br><br>
+      Please check the above-signification of all the graphic symbols used in the storyboard. These symbols are crucial in understanding the illustarted situations.
     </div>
   </div>
 
@@ -144,14 +147,14 @@ body {font-size:16px;}
     <h1 class="w3-xxxlarge" style="color: #9E283E;"><b>Contact & Feedback.</b></h1>
     <hr style="width:50px;border:5px solid #9E283E;" class="w3-round">
     <p>Do you want to participate in improving the pain-model? Fill out the form and fill us in with the details :) We love receiving new nudges and refreshing viewpoints or critics!</p>
-    <form action="/action_page.php" target="_blank">
+    <form action="https://formspree.io/xggbqpox" method="POST" target="blank">
       <div class="w3-section">
         <label>Name</label>
-        <input class="w3-input w3-border" type="text" name="Name" required>
+        <input class="w3-input w3-border" type="text" name="Name">
       </div>
       <div class="w3-section">
         <label>Email</label>
-        <input class="w3-input w3-border" type="text" name="Email" required>
+        <input class="w3-input w3-border" type="text" name="_replyto">
       </div>
       <div class="w3-section">
         <label>Message</label>
