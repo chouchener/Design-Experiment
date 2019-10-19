@@ -12,6 +12,28 @@ body {font-size:16px;}
 summary{cursor: pointer}
 .w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
 .w3-half img:hover{opacity:1}
+
+#scroller {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 10px;
+  z-index: 99;
+  font-size: 14px;
+  border: none;
+  outline: none;
+  background-color: #9E283E;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 4px;
+  opacity: 0.8;
+}
+
+#scroller:hover {
+  background-color: #78698C;
+  opacity: 1;
+}
 </style>
 <body>
 
@@ -104,9 +126,9 @@ summary{cursor: pointer}
     <h1 class="w3-xxxlarge" style="color: #9E283E;"><b>Research Team.</b></h1>
     <hr style="width:50px;border:5px solid #9E283E;" class="w3-round">
     <p>Do you want to know us more?</p>
-    <p>We are from design engineering department in CentraleSupelec in Paris under the direction of Professor Bernard Yannou. In our department we seek 
+    <p>We are from design engineering department in CentraleSupelec in Paris under the direction of Professor Bernard Yannou. In our department we seek to diagnose, model, analyze, simulate and optimize complex systems through engineering & research. We view "complex systems" as a vast word that could include socio-technical systems, products/services, Processes, Humans...
     </p>
-    <p><b>Our resaearch team is thoughtfully implicated in the process of "a better living" design.</b>:</p>
+    <p><b>Our resaearch team is thoughtfully implicated in the process of "a better living" designs.</b></p>
   </div>
 
   <!-- The Team -->
@@ -136,7 +158,7 @@ summary{cursor: pointer}
         <img src="images/me.png" alt="Chouchene" style="width:100%" title="Rim Chouchene">
         <div class="w3-container">
           <h3>Rim Chouchene</h3>
-          <p class="w3-opacity">Graduated student from Design Engineering Master at CentraleSupélec, and Mechanical Engineering at Ecole Nationale d'Ingénieurs Monsatir, Tunisia.</p>
+          <p class="w3-opacity">Graduated student from Design Engineering Master at CentraleSupélec, and Mechanical Engineering at National engineering school of Monastir, Tunisia.</p>
           <p></p>
         </div>
       </div>
@@ -171,6 +193,7 @@ summary{cursor: pointer}
 <!-- Copyrights Container -->
 <div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">Designed by <a href="https://www.linkedin.com/in/rim-chouchene-2a8849a6/" title="Main Developer" target="_blank" class="w3-hover-opacity">Rim Chouchene</a> In <a href="http://www.lgi.centralesupelec.fr/" title="Main research laboratory" target="_blank" class="w3-hover-opacity">LGI CentraleSupelec</a></p></div>
 
+<button onclick="topFunction()" id="scroller" title="Go to top">Top</button>
 
 <script>
 // Script to open and close sidebar
@@ -190,6 +213,24 @@ function onClick(element) {
   document.getElementById("modal01").style.display = "block";
   var captionText = document.getElementById("caption");
   captionText.innerHTML = element.alt;
+}
+//Get the scrolling button
+var mybutton = document.getElementById("scroller");
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+  document.getElementById("scroller").style.transitionDuration = "4s";
+  document.getElementById("scroller").style.transitionProperty = "ease";
 }
 </script>
 
