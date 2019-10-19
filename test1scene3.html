@@ -29,9 +29,10 @@ body {font-size:16px; background-color:#F1F1F1;}
 <div class="w3-main" style="">
   <div class="w3-container" style="margin-top:20px" id="showcase">
     <a href="index.html"><button class="w3-button w3-padding-Medium w3-margin-bottom" style="background-color: #9E283E;color: white;" title="Back to main page"><i class="fa fa-home"></i> Home</button></a>
+    <button class="w3-button w3-padding-large w3-margin-bottom" style="background-color: #9E283E;color: white;" title="full screen" onclick="openFullscreen();"> <i class="fa fa-arrows-alt"></i> Open the test in Fullscreen Mode</button>
     <h1 class="w3-jumbo" style="color: #78698C; text-align: center;margin-left:150px;margin-right:150px; "><b>Test of painful situations' depiction: Scene 3</b></h1>
     <center>   
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeplhS79DEY4BrTU01QjC6odYjC9AMk7H1sff_pqJ2aiAgrig/viewform?embedded=true" width="680" height="520" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+      <iframe id="full" src="https://docs.google.com/forms/d/e/1FAIpQLSeplhS79DEY4BrTU01QjC6odYjC9AMk7H1sff_pqJ2aiAgrig/viewform?embedded=true" width="680" height="520" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
     </center> 
   </div>
 </div>
@@ -39,7 +40,20 @@ body {font-size:16px; background-color:#F1F1F1;}
 <!-- Copyrights Container -->
 <div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">Designed by <a href="https://www.linkedin.com/in/rim-chouchene-2a8849a6/" title="Main Developer" target="_blank" class="w3-hover-opacity">Rim Chouchene</a> In <a href="http://www.lgi.centralesupelec.fr/" title="Main research laboratory" target="_blank" class="w3-hover-opacity">LGI CentraleSupelec</a></p></div>
 
-
+<script>
+var elem = document.getElementById("full");
+function openFullscreen() {
+  if (elem.requestFullscreen) {
+    elem.requestFullscreen();
+  } else if (elem.mozRequestFullScreen) { /* Firefox */
+    elem.mozRequestFullScreen();
+  } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+    elem.webkitRequestFullscreen();
+  } else if (elem.msRequestFullscreen) { /* IE/Edge */
+    elem.msRequestFullscreen();
+  }
+}
+</script>
 
 </body>
 </html>
