@@ -34,6 +34,33 @@ summary{cursor: pointer}
   background-color: #78698C;
   opacity: 1;
 }
+.dropbtn {
+  background-color: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding-left: 16px;
+}
+.dropbtn:hover {
+  background-color: white;
+  color: black;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  color: #9E283E;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.show {display: block;}
+
 </style>
 <body>
 
@@ -46,9 +73,15 @@ summary{cursor: pointer}
   <div class="w3-bar-block">
     <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">About The Experiment</a> 
     
-    <a href="#services" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Storyboard of Test 1</a> 
+    <a href="#services" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Storyboard of use-case 1 'Troublesome Gardening'</a> 
     <a href="#designers" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Research Team</a> 
     <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact & Feedback</a>
+    <button onclick="maFunction()" class="dropbtn" >Know More</button>
+    <div id="myDropdown" class="dropdown-content">
+      <a href="UsefulLinks.html" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Useful Links</a>
+      <a href="OntologyTemplate.html"onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Ontology Template</a>
+      <a href="#"onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Research Presentation.PPT</a>
+    </div>
   </div>
 </nav>
 
@@ -88,22 +121,22 @@ summary{cursor: pointer}
     <div class="w3-half">
       <img src="images/storyboard11.jpg" style="width:100%" onclick="onClick(this)" alt="image of the scene 1">
       <br>
-      <a href="test1scene1.html" target="_blank" style="font-weight: bold; font-style: 30px; color: #9E283E;"> <h2>Encoding Scene 1 </h2></a> click on the link above to take the test1
+      <a href="scene1.html" target="_blank" style="font-weight: bold; font-style: 30px; color: #9E283E;"> <h2>Encoding Scene 1 </h2></a> click on the link above to take the first test
       <img src="images/storyboard13.jpg" style="width:100%" onclick="onClick(this)" alt="image of the scene 3">
       <br>
-      <a href="test1scene3.html" style="font-weight: bold; font-style: 30px; color: #9E283E;"> <h2>Encoding Scene 3 </h2></a> click on the link above to take the test3
+      <a href="scene3.html" style="font-weight: bold; font-style: 30px; color: #9E283E;"> <h2>Encoding Scene 3 </h2></a> click on the link above to take the third test
       <img src="images/storybord15.jpg" style="width:100%" onclick="onClick(this)" alt="image of the scene 5">
       <br>
-      <a href="secne5.html" style="font-weight: bold; font-style: 30px; color: #9E283E;"> <h2>Encoding Scene 5 </h2></a> click on the link above to take the test5
+      <a href="scene5.html" style="font-weight: bold; font-style: 30px; color: #9E283E;"> <h2>Encoding Scene 5 </h2></a> click on the link above to take the fifth test
       
     </div>
 
     <div class="w3-half">
       <img src="images/storyboard12.jpg" style="width:100%" onclick="onClick(this)" alt="image of the scene 2">
-      <br><a href="test1scene2.html" style="font-weight: bold; font-style: 30px; color: #9E283E;"> <h2>Encoding Scene 2 </h2></a> click on the link above to take the test2
+      <br><a href="scene2.html" style="font-weight: bold; font-style: 30px; color: #9E283E;"> <h2>Encoding Scene 2 </h2></a> click on the link above to take the second test
       <img src="images/storyboard14.jpg" style="width:100%" onclick="onClick(this)" alt="image of the scene 4">
       <br>
-      <a href="test1scene4.html" style="font-weight: bold; font-style: 30px; color: #9E283E;"> <h2>Encoding Scene 4 </h2></a> click on the link above to take the test4      
+      <a href="scene4.html" style="font-weight: bold; font-style: 30px; color: #9E283E;"> <h2>Encoding Scene 4 </h2></a> click on the link above to take the fourth test      
       <img src="images/storyboard16.jpg" style="width:100%" onclick="onClick(this)" alt="image of Graphic signs used in the storyboard">
       <br><br>
       Please check the above-signification of all the graphic symbols used in the storyboard. These symbols are crucial in understanding the illustarted situations.
@@ -231,6 +264,27 @@ function topFunction() {
   document.documentElement.scrollTop = 0;
   document.getElementById("scroller").style.transitionDuration = "4s";
   document.getElementById("scroller").style.transitionProperty = "ease";
+}
+</script>
+<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function maFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
 }
 </script>
 

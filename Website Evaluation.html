@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Evaluation of the Experimentation Interface</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<link rel="icon" type="image/png" href="images/experimentlogo.png">
+<style>
+body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+body {font-size:14px; background-color:#F1F1F1;}
+
+#main {
+		margin:30px;
+	}
+	li:hover{
+		color: #9E283E;
+		cursor: pointer;
+	}
+	a:hover{
+		color: #9E283E;
+
+	}
+	h1, h2, h3{
+		color: #9E283E;
+	}
+    table{
+    	table-layout: fixed;
+    	width: 100%;
+    	white-space: wrap;
+    }
+    
+    a{
+    	overflow-wrap: break-word;
+    }
+    img{
+    	cursor: zoom-in;
+    }
+
+</style>
+<body>
+<div id="main">
+	<!--Button Home -->
+  <div class="w3-container" style="margin-top:20px" id="showcase">
+    <a href="index.html"><button class="w3-button w3-padding-Medium w3-margin-bottom" style="background-color: #9E283E;color: white;" title="Back to main page"><i class="fa fa-home"></i> Home</button></a>
+  </div>
+<h2>Results of Evaluating the Experimentation Interface (website)</h3>
+
+  <p>To have a highly intuitive, useful and bug-free Interface that require no specialist training, the website was iteratively optimized and tested under the guidance of a software-developer and two respectively Industrial and data-science engineering students as (UX) volunteers. We tested the usability of the website on the basis of four axes:
+  <ul>
+  	<li><a href="#Readability"> Readability</a></li>
+  	<li><a href="#Accessibility"> Accessibility</a></li>
+  	<li><a href="#Navigability"> Navigability</a></li>
+  	<li><a href="#WebsiteSpeed"> Website Speed</a></li>
+  </ul> 
+  Users' experience was taken into consideration as well. We observed, recorded and anlysed the actions of users regarding the related tasks. </p>
+<hr>
+<h3>Results of Usability Tests</h3>
+<table frame="border" rules="all" style="width: 100%; ">
+
+<tr><td style="color: #78698C;" id="Readability">Results for Readability test</td><td style="background-color: #78698C;color: white;">Figure illustrating the results for Readability test</td></tr>
+
+<tr><td style="background-color: #78698C;color: white;">We used <a href="https://www.webfx.com/tools/read-able/">webfx</a> that calculates the Flesh Kinkaid Level, the SMOG Index and the Automated Readability Index. We got the results based on 3 axes of Readability:
+<b>
+<ul>
+<li> Ease of comprehension</li>
+<li> legibility</li>
+<li> reading enjoyment</li>
+</ul>
+</b> 
+</td>
+<td style="color: #78698C;" id="Readability">
+	<img onclick="onClick(this)" src="images/EditedReadability.png" alt="Outcome of Readability test of the wabsite 'Pain-Model Experimentation' on webfx" style="width:100%;max-width:600px; padding: 10px;">
+	  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0;" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64" style="width: 100%;">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div> 
+</td>
+</tr>
+
+<tr><td style="color: #78698C;" id="Accessibility">Results for Accessibility test</td><td style="background-color: #78698C;color: white;">Figure illustrating the results for Accessibility test</td></tr>
+
+<tr><td style="background-color: #78698C;color: white;">We used <a href="https://wave.webaim.org/">wave</a> that answers the following questions: Does the site work in as many browsing situations as possible? Is the site responsive, flexibly changing the layout depending on how the user views it?
+Are HTML tags being used correctly?
+Did the colors use high contrast? Do the colors create a hindrance to people with colorblindness or poor vision?
+We got the results based on 4 axes of Accessibility:
+<b>
+<ul>
+<li> Cross-Browser</li>
+<li> Platform compatibility</li>
+<li> Color Choice</li>
+<li>Use of HTML Accessibility Features</li>
+</ul>
+</b> 
+</td>
+<td style="color: #78698C;" id="Accessibility">
+	<img onclick="onClick(this)" src="images/Edited Accessibility.png" alt="Outcome of Accessibility test of the website 'Pain-Model Experimentation' on wave" style="width:100%;max-width:600px; padding: 10px;">
+	  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0;" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64" style="width: 100%;">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div> 
+</td>
+</tr>
+
+<tr><td style="color: #78698C;" id="Navigability">Results for Navigability test</td><td style="background-color: #78698C;color: white;">Figure illustrating the results for Navigability test</td></tr>
+
+<tr><td style="background-color: #78698C;color: white;">We used <a href="https://datayze.com/site-navigability-analyzer.php">datayze</a> SpiderBot that calculates the shortest path from a splash page to any internal page, the overall connectivity of the site, highly connected hubs and destination leaf nodes. It finds the linking errors too.
+We got the results based on 3 axes of Navigability:
+<b>
+<ul>
+<li> Information Architecture (IA)</li>
+<li> Findability</li>
+<li> Efficiency of Navigation</li>
+</ul>
+</b> 
+</td>
+<td style="color: #78698C;" id="Navigability">
+	<img onclick="onClick(this)" src="images/EditedNavigability.jpg" alt="Outcome of Navigability test of the website 'Pain-Model Experimentation' on datayze" style="width:100%;max-width:600px; padding: 10px;">
+	  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0;" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64" style="width: 100%;">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div> 
+</td>
+</tr>
+
+<tr><td style="color: #78698C;" id="WebsiteSpeed">Results for Website Speed test</td><td style="background-color: #78698C;color: white;">Figure illustrating the results for Website Speed test</td></tr>
+
+<tr><td style="background-color: #78698C;color: white;">We used <a href="https://tools.pingdom.com/">pingdom</a> that evaluates the HTTP response codes using colored-performance indicators.
+We got the results based on 3 axes of WebsiteSpeed:
+<b>
+<ul>
+<li> Webpage Response Time</li>
+<li> Webpage Size</li>
+<li> Code Quality</li>
+</ul>
+</b> 
+</td>
+<td style="color: #78698C;" id="WebsiteSpeed">
+	<img onclick="onClick(this)" src="images/EditedSpeed.png" alt="Outcome of the Speed test of the website 'Pain-Model Experimentation' on datayze" style="width:100%;max-width:600px; padding: 10px;">
+	  <!-- Modal for full size images on click-->
+  <div id="modal01" class="w3-modal w3-black" style="padding-top:0;" onclick="this.style.display='none'">
+    <span class="w3-button w3-black w3-xxlarge w3-display-topright">×</span>
+    <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64" style="width: 100%;">
+      <img id="img01" class="w3-image">
+      <p id="caption"></p>
+    </div>
+  </div> 
+</td>
+</tr>
+</table>
+</div>
+
+
+<!-- Copyrights Container -->
+<div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">Designed by <a href="https://www.linkedin.com/in/rim-chouchene-2a8849a6/" title="Main Developer" target="_blank" class="w3-hover-opacity">Rim Chouchene</a> In <a href="http://www.lgi.centralesupelec.fr/" title="Main research laboratory" target="_blank" class="w3-hover-opacity">LGI CentraleSupelec</a></p></div>
+
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+</script>
+
+</body>
+</html>

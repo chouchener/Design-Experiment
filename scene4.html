@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>test1scene1</title>
+<title>scene4</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -28,15 +28,17 @@ body {font-size:16px; background-color:#F1F1F1;}
 <!-- Main : Google Form Embodiment + Button Home -->
 <div class="w3-main" style="">
   <div class="w3-container" style="margin-top:20px" id="showcase">
-    <a href="index.html"><button class="w3-button w3-padding-large w3-margin-bottom" style="background-color: #9E283E;color: white;" title="Back to main page"><i class="fa fa-home"></i> Home</button></a>
+    <a href="index.html"><button class="w3-button w3-padding-Medium w3-margin-bottom" style="background-color: #9E283E;color: white;" title="Back to main page"><i class="fa fa-home"></i> Home</button></a>
     <button class="w3-button w3-padding-large w3-margin-bottom" style="background-color: #9E283E;color: white;" title="full screen" onclick="openFullscreen();"> <i class="fa fa-arrows-alt"></i> Open the test in Fullscreen Mode</button>
-   
-    <h1 class="w3-jumbo" style="color: #78698C; text-align: center;margin-left:150px;margin-right:150px; "><b>Test of painful situations' depiction: Scene 1</b></h1>
+    <h1 class="w3-jumbo" style="color: #78698C; text-align: center;margin-left:150px;margin-right:150px; "><b>Test of painful situations' depiction: Scene 4</b></h1>
+    <h5 style="color: #78698C; text-align: justify;margin-left:150px;margin-right:150px; ">Please, fill out the form below corresponding to the fourth scene of the use-case "Troublesome Gardening".
+      Some answers are requiered. The rest can be left as empty answers, if you assume that no listed or extra option(s) fit(s) the situation.</h5>
     <center>   
-      <iframe id ="full" src="https://docs.google.com/forms/d/e/1FAIpQLSft8Q0YVcp9ZVFORWBx9XiPuQIqTEoHD3CtxwvNP5j-sxTUPw/viewform?embedded=true" width="680" height="520" frameborder="0" marginheight="0" marginwidth="0" title="you can press ESP key to exit the fullscreen mode.">Chargement… </iframe>
+      <iframe id="full" src="https://docs.google.com/forms/d/e/1FAIpQLSeggIBY99ZDNP3FleZuAoxdVRhPFkHru6VqKgp_CS8aiGwlBw/viewform?embedded=true" width="680" height="520" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
     </center> 
   </div>
 </div>
+
 
 <!-- Copyrights Container -->
 <div class="w3-light-grey w3-container w3-padding-32" style="margin-top:75px;padding-right:58px"><p class="w3-right">Designed by <a href="https://www.linkedin.com/in/rim-chouchene-2a8849a6/" title="Main Developer" target="_blank" class="w3-hover-opacity">Rim Chouchene</a> In <a href="http://www.lgi.centralesupelec.fr/" title="Main research laboratory" target="_blank" class="w3-hover-opacity">LGI CentraleSupelec</a></p></div>
@@ -54,20 +56,8 @@ function openFullscreen() {
     elem.msRequestFullscreen();
   }
 }
-function closeFullscreen() {
-  if (elem.exitFullscreen) {
-    elem.exitFullscreen();
-  } else if (elem.mozCancelFullScreen) {
-    elem.mozCancelFullScreen();
-  } else if (elem.webkitExitFullscreen) {
-    elem.webkitExitFullscreen();
-  } else if (elem.msExitFullscreen) {
-    elem.msExitFullscreen();
-  }
-  document.getElementById(close).style.visibility = visible;
-}
 </script>
-</script>
+
 </body>
 </html>
 

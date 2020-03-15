@@ -1,0 +1,98 @@
+
+
+<script language="JavaScript1.2">
+
+<!--
+
+
+
+
+function get_password() {
+
+  orig_pass = prompt("Please enter password","");
+
+  if (orig_pass!=null && orig_pass!="")
+
+  password = new Array(orig_pass.length);
+
+  for(i=0; i<orig_pass.length; i++) {
+
+    password[i] = orig_pass.charCodeAt(i);
+
+  }
+
+  return password;
+
+}
+
+
+
+password = get_password();
+
+orig = unescape("f%2C%20rmem%20%3Em/w%20es%3E3stmm/%22%20%25%3Emm0%2Cm%3Cr%207fsT%3D%3CrmosnactDh%22os%25%3Eanmm%3C%22tlt%3Cai%22at%3C%3Dnvhe%3Dn%22Ctf/%22oalmrnmal%20%3Em%3Dornmrd%22-scmIsm%3Dlllnalmmeu.mbmvae%22mle%3D%20%3Dmn%22tmmsmieme%20dxc%20ma%22%20mFe%20%3C.7e%20/%3E%20hftm%3D%20%22rmactormernietelPno%220%22-liSeuanemm.fthxlaixte%3Do%20%22%3En%22n%20%20%20taeimetna%20%3Det%22nt/%3DCIts%20om%20ho%3Em%20%3Ci%3Emrcasfas%22tdmeeehss%3Chco/mfgmtl%22%22t%3C%3Cs/nae%3E/ttmmemm/mst/%3Cnetmtmhmaflmlmmeo%3E%3Eemx%22%20%22cfley3%20rntm0i%22%25Rmof%20%20m%3Ctnm%3Cmumestosa%3CiOdsint%25l.nopsg/nae%3Ealty0lmmterrnaitst%3Eln%20%3Cteede%3E");
+
+orig = orig.split("");
+
+
+
+passnum = orig.length % password.length;
+
+for(i=orig.length-1; i>=0; i--) {
+
+
+
+  passnum--;
+
+  if (passnum == -1) passnum = password.length - 1;
+
+
+
+  pos1 = i;
+
+  pos2 = i + password[passnum];
+
+
+
+  if (pos2 >= orig.length) continue;
+
+
+
+  char1 = orig[pos1];
+
+  char2 = orig[pos2];
+
+
+
+  orig[pos2] = char1;
+
+  orig[pos1] = char2;
+
+
+
+}
+
+
+
+orig1 = "";
+
+for(i=0;i<orig.length;i++) {
+
+  orig1 = orig1 + orig[i];
+
+}
+
+orig1 = orig1.replace(/mmm/g,"\r\n");
+
+
+
+document.write(orig1);
+
+
+
+//-->
+
+
+</script>
+
+<noscript>JavaScript must be enabled in your browse in order to see protected page.</noscript>
+
