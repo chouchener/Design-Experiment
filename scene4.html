@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
 <link rel="icon" type="image/png" href="images/experimentlogo.png">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="formscss.css">
 <style>
 body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
 body {font-size:16px; background-color:#F1F1F1;}
@@ -36,6 +37,10 @@ body {font-size:16px; background-color:#F1F1F1;}
     <center>   
       <iframe id="full" src="https://docs.google.com/forms/d/e/1FAIpQLSeggIBY99ZDNP3FleZuAoxdVRhPFkHru6VqKgp_CS8aiGwlBw/viewform?embedded=true" width="680" height="520" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
     </center> 
+    <nav class="float-nav closed" title="View Full Storyboard">
+      <br>
+      <img src="images/fullviewStoryboard.png" style="width: 800px;height: 500px;">
+    </nav>
   </div>
 </div>
 
@@ -58,6 +63,22 @@ function openFullscreen() {
 }
 </script>
 
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script id="rendered-js">
+var floatNav = $('.float-nav'),
+mainContent = $('.main-content');
+
+floatNav.on('click', function (e) {
+  $(this).toggleClass('closed');
+  e.stopPropagation();
+  e.preventDefault();
+});
+
+mainContent.on('click', function () {
+  if (!floatNav.hasClass('closed')) floatNav.addClass('closed');
+});
+</script>
 </body>
 </html>
 
