@@ -40,8 +40,8 @@ body {font-size:16px; background-color:#F1F1F1;}
       <iframe id ="full" src="https://docs.google.com/forms/d/e/1FAIpQLSft8Q0YVcp9ZVFORWBx9XiPuQIqTEoHD3CtxwvNP5j-sxTUPw/viewform?embedded=true" width="640" height="2898" frameborder="0" marginheight="0" marginwidth="0" title="you can press ESP key to exit the fullscreen mode.">Loading…</iframe>
     </center> 
     <nav class="float-nav closed" title="View Full Storyboard">
-      <br>
-      <img src="images/fullviewStoryboard1.png" style="width: 800px;height: 500px;">
+      <p style="color: white; font-size: 12px; top: 0px;">ALL Scenes</p>
+      <img src="images/fullviewStoryboard1.png" style="width: 770px;height: 500px;">
     </nav>
   </div>
 </div>
@@ -86,7 +86,6 @@ floatNav.on('click', function (e) {
   $(this).toggleClass('closed');
   e.stopPropagation();
   e.preventDefault();
-  window.style.background-color('black');
 });
 
 mainContent.on('click', function () {
