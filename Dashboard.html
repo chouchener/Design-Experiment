@@ -1,0 +1,502 @@
+<html lang="en"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dashboard of the experiment results </title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<link rel="icon" type="image/png" href="images/experimentlogo.png">
+<style>
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  outline: none;
+}
+a:hover{
+  cursor: pointer;
+}
+body {background-color: #2a2b3d}
+#contents {
+  position: relative;
+  -webkit-transition: .3s;
+  transition: .3s;
+  background-color: #2a2b3d;
+}
+.margin {
+  margin-left: 0 !important;
+}
+
+.dang {background-color: #f35959}
+.prim {background-color: #0275d8}
+.succ {background-color: #5cb85c}
+/* End num */
+
+.welcome {
+  color: #CCC;
+}
+.welcome .content {
+  background-color: #313348;
+  padding: 15px;
+  margin-top: 25px;
+}
+.welcome h2 {
+  font-family: Calibri;
+  font-weight: 100;
+  margin-top: 0
+}
+.welcome p {
+  color: #999;
+}
+
+
+/* Start statistics */
+.statistics {
+  margin-top: 25px;
+  color: #CCC;
+}
+.statistics .box {
+  background-color: #313348;
+  padding: 15px;
+  overflow: hidden;
+}
+.statistics .box > i {
+  float: left;
+  color: #FFF;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  font-size: 22px;
+}
+.statistics .box .info {
+  float: left;
+  width: auto;
+  margin-left: 10px;
+}
+.statistics .box .info h3 {
+  margin: 5px 0 5px;
+  display: inline-block;
+}
+.statistics .box .info p {color:#BBB}
+
+/* End statistics */
+/* Start charts */
+.charts {
+  margin-top: 25px;
+  color: #BBB
+}
+.charts .chart-container {
+  background-color: #313348;
+  padding: 15px;
+}
+.charts .chart-container h3 {
+  margin: 0 0 10px;
+  font-size: 17px;
+}
+
+.statis {
+  color: #EEE;
+  margin-top: 15px;
+}
+.statis .box {
+  position: relative;
+  padding: 15px;
+  overflow: hidden;
+  border-radius: 3px;
+  margin-bottom: 25px;
+}
+.statis .box h3:after {
+  content: "";
+  height: 2px;
+  width: 70%;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.12);
+  display: block;
+  margin-top: 10px;
+}
+.statis .box i {
+  position: absolute;
+  height: 70px;
+  width: 70px;
+  font-size: 22px;
+  padding: 15px;
+  top: -25px;
+  left: -25px;
+  background-color: rgba(255, 255, 255, 0.15);
+  line-height: 60px;
+  text-align: right;
+  border-radius: 50%;
+}
+
+/*chart*/
+.chrt3 {
+  padding-bottom: 50px;
+  color: #BBB;
+}
+.chrt3 .chart-container {
+  height: 350px;
+  padding: 15px;
+  margin-top: 25px;
+}
+.chrt3 .box {
+  padding: 15px;
+}
+
+.main-color {
+  color: #ffc107
+}
+.warning {background-color: #f0ad4e}
+.danger {background-color: #d9534f}
+.success {background-color: #5cb85c}
+.inf {background-color: #5bc0de}
+
+
+</style>
+<script>
+  window.console = window.console || function(t) {};
+</script>
+<script>
+  if (document.location.search.match(/type=embed/gi)) {
+    window.parent.postMessage("resize", "*");
+  }
+</script>
+</head>
+<body translate="no">
+
+<section id="contents">
+<div class="welcome">
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-12">
+<div class="content">
+<h2>DASHBOARD featuring the results of the experimentation: "Testing a Pain-Ontology"</h2>
+<p>To see the process of data-collection and calculation check the following spreadsheet: <a>https://drive.google.com/open?id=1i0o9Q0qSNlz2lhMyTD4lgBBPMSKhuRlZ </a></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section class="statistics">
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-4">
+<div class="box">
+<i class="fa fa-question fa-fw bg-primary"></i>
+<div class="info">
+<h3>16</h3> <span>Questions per Scene</span>
+<p style="font-size: 13px;">6 participants encoded an average of <br>3.5 scenes (forms) out of 5 (valid answeres) <br></p>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="box">
+<i class="fa fa-bomb fa-fw danger"></i>
+<div class="info">
+<h3>73</h3> <span>Incorporated Pitfalls</span>
+<p style="font-size: 13px;">20* pitfall 02 + 11* pitfall 07 + 24* pitfall 32 <br> + 18* pitfall 06, incorporated in the 5 forms</p>
+</div>
+</div>
+</div>
+<div class="col-md-4">
+<div class="box">
+<i class="fa fa-users fa-fw success"></i>
+<div class="info">
+<h3>95%</h3> <span>Response Rate</span>
+<p style="font-size: 13px;">complete forms submitted by 6 participants <br> divided by the partial and complete ones</p>
+</div>
+</div>
+</div>
+</div>
+ </div>
+</section>
+<section class="charts">
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-6">
+<div class="chart-container"><iframe class="chartjs-hidden-iframe" tabindex="-1" style="display: block; overflow: hidden; border: 0px; margin: 0px; top: 0px; left: 0px; bottom: 0px; right: 0px; height: 100%; width: 100%; position: absolute; pointer-events: none; z-index: -1;"></iframe>
+<h3>Average (Avg) scores of participants vs Gold standard</h3>
+<canvas id="myChart" width="310" height="155" style="display: block; width: 310px; height: 155px;"></canvas>
+</div>
+</div>
+<div class="col-md-6">
+<div class="chart-container"><iframe class="chartjs-hidden-iframe" tabindex="-1" style="display: block; overflow: hidden; border: 0px; margin: 0px; top: 0px; left: 0px; bottom: 0px; right: 0px; height: 100%; width: 100%; position: absolute; pointer-events: none; z-index: -1;"></iframe>
+<h3>Occurence of pitfalls within an average real performance (%) </h3>
+<canvas id="myChart2" width="310" height="155" style="display: block; width: 310px; height: 155px;">
+  
+</canvas>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<section class="statis text-center">
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-3">
+<div class="box warning">
+<i class="fa fa-random"></i>
+<h3>46%</h3>
+<p class="lead">ALIGNMENT </p>
+<p>real-performance : Gold-standard</p>
+</div>
+</div>
+<div class="col-md-3">
+<div class="box danger">
+<i class="fa fa-bomb"></i>
+<h3>15%</h3>
+<p class="lead">Average pitfalls occurence</p>
+</div>
+</div>
+<div class="col-md-3">
+<div class="box success">
+<i class="fa fa-bullseye"></i>
+ <h3>74%</h3>
+<p class="lead">PRECISION</p>
+<p>Correctly identified instances</p>
+</div>
+</div>
+<div class="col-md-3">
+<div class="box bg-primary">
+<i class="fa fa-tasks"></i>
+<h3>73%</h3>
+<p class="lead">RECALL</p>
+<p>Correct instances out of requiered</p>
+<p></p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="chrt3">
+<div class="container-fluid">
+<div class="row">
+<div class="col-md-9">
+<div class="chart-container"><iframe class="chartjs-hidden-iframe" tabindex="-1" style="display: block; overflow: hidden; border: 0px; margin: 0px; top: 0px; left: 0px; bottom: 0px; right: 0px; height: 100%; width: 100%; position: absolute; pointer-events: none; z-index: -1;"></iframe>
+  <h3>Superposition of real perfomance vectors and reference vector</h3>
+<canvas id="chart3" width="743" height="371" style="display: block; width: 743px; height: 450px;"></canvas>
+</div>
+</div>
+<div class="col-md-4">
+<div class="box">
+</div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+
+<script src="https://static.codepen.io/assets/common/stopExecutionOnTimeout-157cd5b220a5c80d4ff8e0e70ac069bffd87a61252088146915e8726e5d9f147.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.bundle.js"></script>
+<script id="rendered-js">
+$(function () {
+
+
+  // Start chart
+  var chart = document.getElementById('myChart');
+  Chart.defaults.global.animation.duration = 2000; // Animation duration
+  Chart.defaults.global.title.display = false; // Remove title
+  Chart.defaults.global.title.text = "Chart"; // Title
+  Chart.defaults.global.title.position = 'bottom'; // Title position
+  Chart.defaults.global.defaultFontColor = '#999'; // Font color
+  Chart.defaults.global.labelsFontSize = 11; // Font size for every label
+
+  // Chart.defaults.global.tooltips.backgroundColor = '#FFF'; // Tooltips background color
+  Chart.defaults.global.tooltips.borderColor = 'white'; // Tooltips border color
+  Chart.defaults.global.legend.labels.padding = 10;
+  Chart.defaults.scale.ticks.beginAtZero = true;
+  Chart.defaults.scale.gridLines.zeroLineColor = 'rgba(255, 255, 255, 0.1)';
+  Chart.defaults.scale.gridLines.color = 'rgba(255, 255, 255, 0.02)';
+  Chart.defaults.global.legend.display = false;
+
+
+  var myChart = new Chart(chart, {
+    type: 'bar',
+    data: {
+
+      labels: ["Participant1", "Participant2", "Participant3", "Participant4", "Participant5", "Participant6", "Gold-standard"],
+      datasets: [{
+        label: "Avg correct answers",
+        fill: false,
+        lineTension: 0,
+        data: [9, 9.67, 10.25, 8.25, 8, 8.5, 16],
+        pointBorderColor: "#5cb85c",
+        borderColor: '#5cb85c',
+        borderWidth: 2,
+        showLine: true },
+        {        
+        label: "Avg partial answers",
+        fill: false,
+        lineTension: 0,
+        data: [2.25, 2, 2, 1.5, 1.5, 0.5, 0],
+        pointBorderColor: "#ffcd56",
+        borderColor: '#ffcd56',
+        borderWidth: 2,
+        showLine: true },
+        {        
+        label: "Avg missing answers",
+        fill: false,
+        lineTension: 0,
+        data: [2.75, 2.67, 2.25, 2.75, 3.25, 3, 0],
+        pointBorderColor: "#4bc0c0",
+        borderColor: '#4bc0c0',
+        borderWidth: 2,
+        showLine: true },
+      {
+        label: "Avg spurious answers",
+        fill: false,
+        lineTension: 0,
+        startAngle: 2,
+        data: [2, 1.33, 1.5, 3.5, 3.25, 4, 0],
+        // , '#ff6384', '#4bc0c0', '#ffcd56', '#457ba1'
+        backgroundColor: "transparent",
+        pointBorderColor: "#ff6384",
+        borderColor: '#ff6384',
+        borderWidth: 2,
+        showLine: true }] } });
+
+
+
+  //  Chart ( 2 )
+  var Chart2 = document.getElementById('myChart2').getContext('2d');
+  var chart = new Chart(Chart2, {
+    type: 'pie',
+    data: {
+
+      labels: [ "Frequency of getting trapped in pitfall P02 (Creating synonyms as classes)", "Frequency of escaping pitfall P02", "Frequency of getting trapped in P07 (Merge different concepts in same class)", "Frequency of escaping pitfall P07","Frequency of getting trapped in pitfall P32 (Several classes with the same label)", "Frequency of escaping pitfall P32","Frequency of getting trapped in pitfall P06 (Including cycles in a class hierarchy)", "Frequency of escaping pitfall P06"],
+      datasets: [
+
+     {
+       
+        lineTension: .4,
+        data: [3 , 24, 2, 13, 3, 30, 6, 19],
+        backgroundColor: ["#337ab7", "#094B83", "#f0ad4e", "#CB7C0D", "#5cb85c", "#369836","#d9534f", "#BE2F2B"],
+        
+        pointBorderColor: "#ffcd56",
+        
+        borderWidth: 2,
+        showLine: true }
+
+        ]},
+
+
+
+    // Configuration options
+    options: {
+      title: {
+        display: false } } });
+
+
+
+
+  var chart = document.getElementById('chart3');
+  Chart.defaults.global.legend.display = true;
+  var myChart = new Chart(chart, {
+    type: 'line',
+    data: {
+      labels: ["frequency of escaping P02", "frequency of escaping P07", "frequency of escaping P32", "frequency of escaping P06"],
+      datasets: [{
+        label: "ontology 1 (%)",
+        fill: true,
+        lineTension: .5,
+        pointBorderColor: "transparent",
+        pointColor: "white",
+        borderColor: '#d9534f',
+        borderWidth: 1,
+        showLine: true,
+        data: [23,  11, 29, 21],
+        pointBackgroundColor: 'transparent' },
+      {
+        label: "ontology 2 (%)",
+        fill: false,
+        lineTension: .5,
+        pointColor: "white",
+        borderColor: '#5cb85c',
+        borderWidth: 1,
+        showLine: true,
+        data: [23,  12, 29, 18],
+        pointBackgroundColor: 'transparent' },
+
+      {
+        label: "ontology 3 (%)",
+        fill: false,
+        lineTension: .5,
+        pointColor: "white",
+        borderColor: '#f0ad4e',
+        borderWidth: 1,
+        showLine: true,
+        data: [25, 15, 27, 15],
+        pointBackgroundColor: 'transparent' },
+
+              {
+        label: "ontology 4 (%)",
+        fill: false,
+        lineTension: .5,
+        pointColor: "white",
+        borderColor: '#78698C',
+        borderWidth: 1,
+        showLine: true,
+        data: [23, 14, 30, 14],
+        pointBackgroundColor: 'transparent' },
+
+              {
+        label: "ontology 5 (%)",
+        fill: false,
+        lineTension: .5,
+        pointColor: "white",
+        borderColor: 'yellow',
+        borderWidth: 1,
+        showLine: true,
+        data: [22, 11, 30, 21],
+        pointBackgroundColor: 'transparent' },
+
+              {
+        label: "ontology 6 (%)",
+        fill: false,
+        lineTension: .5,
+        pointColor: "white",
+        borderColor: '#337ab7',
+        borderWidth: 1,
+        showLine: true,
+        data: [27, 15, 32, 22],
+        pointBackgroundColor: 'transparent' },
+
+              {
+        label: "avg performance (%)",
+        fill: false,
+        lineTension: .5,
+        pointColor: "white",
+        borderColor: 'black',
+        borderWidth: 4,
+        showLine: true,
+        data: [24, 13, 29, 18],
+        pointBackgroundColor: 'transparent' },
+
+      {
+        label: "Gold standard (%)",
+        fill: false,
+        lineTension: .5,
+        pointColor: "white",
+        borderColor: 'white',
+        borderWidth: 4,
+        showLine: true,
+        data: [27,  15, 33, 25],
+        pointBackgroundColor: 'transparent' }] } });
+
+
+
+
+});
+//# sourceURL=pen.js
+    </script>
+
+
+</body></html>
+
